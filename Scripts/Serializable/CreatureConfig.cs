@@ -12,15 +12,13 @@ using System;
 public class CreatureData
 {
     /// <summary>
-    /// 生物ID
-    /// </summary>
-    public int ID = 0;
-
-    /// <summary>
     /// 生物名称
     /// </summary>
     public string Name = "";
-
+    /// <summary>
+    /// 生物ID
+    /// </summary>
+    public int ID = 0;
     /// <summary>
     /// 生物体型半径
     /// </summary>

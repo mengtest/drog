@@ -13,14 +13,25 @@ MonoBehaviour:
   m_Name: CreatureConfig
   m_EditorClassIdentifier: 
   CreatureDataList:
-  - ID: 0
-    Name: Alex
-    Radius: 0.2
-    curHP: 100
-    maxHP: 100
-    curMP: 100
-    maxMP: 100
+  - Name: PlayerW
+    ID: 0
+    Radius: 0.3
+    curHP: 300
+    maxHP: 300
+    curMP: 300
+    maxMP: 300
     Attack: 2
-    Defence: 20
+    Defence: 40
     Speed: 4
     EnableSkillIDList: 000000000100000002000000030000000a0000000400000005000000090000000600000007000000080000000b000000
+  - Name: PlayerA
+    ID: 0
+    Radius: 0.2
+    curHP: 300
+    maxHP: 300
+    curMP: 300
+    maxMP: 300
+    Attack: 4
+    Defence: 25
+    Speed: 4
+    EnableSkillIDList: 0c0000000d0000000e0000000f0000001000000011000000

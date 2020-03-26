@@ -102,11 +102,11 @@ public class Logic
         } else if(id==4) {
 
         } else {
-            
+
         }
         //tempobject.pos = new Vector3(0,0,0);
         tempobject.rot = new Vector3(0,0,0);
-        tempobject.InitLivinngCreature();
+        tempobject.InitLivinngCreature(id);
         //PlayerMp[name] = Instantiate(MyResources[PlayerResourcesName[i]],tempobject.pos,tempobject.rot);
         obinfmp[name] = tempobject;
 

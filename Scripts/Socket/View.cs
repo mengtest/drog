@@ -62,8 +62,8 @@ public class View
             //用户不存在就新建
             if(!obmp.ContainsKey(name)) {
                 Debug.Log("new palyer name " + name);
-                obmp[name] = GameObject.Instantiate(MyResources["PlayerW"],obinf.pos,Quaternion.identity);
-                obmp[name].transform.Find("body").GetComponent<SkinnedMeshRenderer>().material = RSDB.mat[obinf.id-1];
+                obmp[name] = GameObject.Instantiate(MyResources[obinf.curCreatureData.Name],obinf.pos,Quaternion.identity);
+                //obmp[name].transform.Find("body").GetComponent<SkinnedMeshRenderer>().material = RSDB.mat[obinf.id-1];
                 obmp[name].name = name;
 
                 //新建玩家为本机玩家，绑定相机

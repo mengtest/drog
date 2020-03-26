@@ -101,6 +101,7 @@ public class Creature : ObjectInf {
     /// </summary>
     /// <param name="LivingCreatureID"></param>
     public void InitLivinngCreature(int LivingCreatureID = 0) {
+        if(LivingCreatureID+1>RSDB.creatureConfig.CreatureDataList.Count) LivingCreatureID = 0;
 
         //---------更改名字
         //gameObject.name = PlayerName;

@@ -65,6 +65,7 @@ public class RSDB
 
         //战士人物
         DB["PlayerW"] = Resources.Load("PlayerW") as GameObject;
+        DB["PlayerA"] = Resources.Load("Archer/PlayerA") as GameObject;
 
         //人物信息面板
         DB["PlayerInfPanel"] = Resources.Load("PlayerInfPanel") as GameObject;
