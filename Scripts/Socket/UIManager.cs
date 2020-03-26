@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class UIManager
 {
     public static EasyTouchMove touch; //遥感控件
+    public static EasyTouchMove touchR; //右摇杆
     private static GameObject buttonSkill1;
     private static GameObject buttonSkill2;
     private static GameObject buttonSkill3;
@@ -15,10 +16,13 @@ public class UIManager
     private static GameObject buttonSkillB;
     private static GameObject buttonPlayerInfPanel;
     private static GameObject PlayerInfPanel;
+    private static FollowPlayer follow;
     public static void Init()
     {
+        follow = GameObject.Find("Main Camera").GetComponent<FollowPlayer>();
         //----------初始化遥感-----------------------------------------------------------------------
-        touch = GameObject.Find("touch").GetComponent<EasyTouchMove>();
+        touch  = GameObject.Find("touch" ).GetComponent<EasyTouchMove>();
+
         //----------初始化生物信息-------------------------------------------------------------------
         //InitCreature(0);
         //-----------加载人物面板控件--------------------------------------------------------------------
@@ -84,7 +88,7 @@ public class UIManager
         if (direction != Vector3.zero) {
             opt.Optype = Client.MOVETYPE;
             var Direction = Quaternion.LookRotation(direction);
-            opt.Dir = (int)((Direction.eulerAngles.y+7.5f)/15.0f);
+            opt.Dir = ((int)((Direction.eulerAngles.y+7.5f)/15.0f) + follow.GetCameraDir())%24;
             if(Time.time-pret>=0.01f) {
                 Client.Send(Client.FRAMOPTYPE,opt);
                 pret = Time.time;
@@ -117,7 +121,7 @@ public class UIManager
             PlaySkill3();
         } else if(Input.GetKeyDown("p")) {
             PlaySkillBeAttacked();
-        } else if(Input.GetKeyDown("e")||Input.GetKey("e")) {
+        } else if(Input.GetKeyDown(KeyCode.Space)||Input.GetKey(KeyCode.Space)) {
             PlaySkillB();
         } else if(Input.GetKeyDown("o")) {
             var optt = new FramOpt();

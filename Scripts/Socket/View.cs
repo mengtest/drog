@@ -68,7 +68,8 @@ public class View
 
                 //新建玩家为本机玩家，绑定相机
                 if(Client.name==name) {
-                    
+                    var camera = GameObject.Find("Main Camera");
+                    camera.GetComponent<FollowPlayer>().player = obmp[name].transform;
                 }
             }
             var obt = obmp[name].transform;
