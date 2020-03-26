@@ -1,0 +1,269 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8bb9ad85f77ed4fa33ef8dced2e1ce, type: 3}
+  m_Name: SkillConfig 2
+  m_EditorClassIdentifier: 
+  SkillDataList:
+  - ID: 0
+    SkillName: zhanli
+    SkillIcon: {fileID: 0}
+    StateName: Idle
+    AnimationName: W_Idle
+    SkillSEList: []
+    DuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    CoolingTime: 0
+    CostMP: 0
+    ATKs: []
+    BUFFs: []
+    Bullets: []
+    MOVEs: []
+  - ID: 1
+    SkillName: bengpao
+    SkillIcon: {fileID: 0}
+    StateName: Run
+    AnimationName: W_Run
+    SkillSEList: []
+    DuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    CoolingTime: 0
+    CostMP: 0
+    ATKs: []
+    BUFFs: []
+    Bullets: []
+    MOVEs: []
+  - ID: 2
+    SkillName: shouji
+    SkillIcon: {fileID: 0}
+    StateName: BeAttacked
+    AnimationName: W_BeAttacked
+    SkillSEList: []
+    DuringTime: 0.3
+    SkillRollEndTime: 0.3
+    ShakeBackBeginTime: 0.3
+    CoolingTime: 0
+    CostMP: 0
+    ATKs: []
+    BUFFs: []
+    Bullets: []
+    MOVEs: []
+  - ID: 3
+    SkillName: siwang
+    SkillIcon: {fileID: 0}
+    StateName: Dead
+    AnimationName: W_Dead
+    SkillSEList: []
+    DuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    CoolingTime: 0
+    CostMP: 0
+    ATKs: []
+    BUFFs: []
+    Bullets: []
+    MOVEs: []
+  - ID: 4
+    SkillName: putonggongji
+    SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
+    StateName: W_Putonggongji
+    AnimationName: W_Putonggongji
+    SkillSEList: []
+    DuringTime: 1.333
+    SkillRollEndTime: 0.2
+    ShakeBackBeginTime: 0.7
+    CoolingTime: 1.4
+    CostMP: 0
+    ATKs:
+    - SkillAttackJudgeBeginTime: 0.25
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 3
+      SkillAttackJudgeAreaRadius: 1
+      AttackJudgeAreaAngle: 90
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 10
+    BUFFs: []
+    Bullets: []
+    MOVEs: []
+  - ID: 5
+    SkillName: shanbi
+    SkillIcon: {fileID: 21300000, guid: dc569786b1378d140b50ddc13c8a47a2, type: 3}
+    StateName: Dodge
+    AnimationName: W_Shanbi
+    SkillSEList: []
+    DuringTime: 0.6
+    SkillRollEndTime: 0
+    ShakeBackBeginTime: 0.55
+    CoolingTime: 2
+    CostMP: 0
+    ATKs:
+    - SkillAttackJudgeBeginTime: 0
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 0
+      SkillAttackJudgeAreaRadius: 0
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 0
+    BUFFs: []
+    Bullets: []
+    MOVEs:
+    - BeginTime: 0
+      DuringTime: 0.6
+      Speed: 2
+  - ID: 6
+    SkillName: xuanfengzhan
+    SkillIcon: {fileID: 21300000, guid: 3c56a2dcd3fa04745a57f36f56a1d517, type: 3}
+    StateName: W_Xuanfengzhan
+    AnimationName: W_Xuanfengzhan
+    SkillSEList: []
+    DuringTime: 2
+    SkillRollEndTime: 0
+    ShakeBackBeginTime: 2
+    CoolingTime: 1
+    CostMP: 0
+    ATKs:
+    - SkillAttackJudgeBeginTime: 0.1
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 0.8
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 2
+    - SkillAttackJudgeBeginTime: 0.4
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 0.8
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 2
+    - SkillAttackJudgeBeginTime: 0.7
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 0.8
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 2
+    - SkillAttackJudgeBeginTime: 1
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 0.8
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 2
+    - SkillAttackJudgeBeginTime: 1.3
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 0.8
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 2
+    - SkillAttackJudgeBeginTime: 1.6
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 0.8
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 2
+    - SkillAttackJudgeBeginTime: 1.9
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 0.8
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 2
+    BUFFs: []
+    Bullets: []
+    MOVEs: []
+  - ID: 7
+    SkillName: banyuezhan
+    SkillIcon: {fileID: 21300000, guid: de5a9e700f73a6c46a5844d5219e88ce, type: 3}
+    StateName: W_Banyuezhan
+    AnimationName: W_Banyuezhan
+    SkillSEList: []
+    DuringTime: 3.367
+    SkillRollEndTime: 1.066
+    ShakeBackBeginTime: 2.333
+    CoolingTime: 5
+    CostMP: 5
+    ATKs: []
+    BUFFs: []
+    Bullets:
+    - BulletSEName: LeiDianQiu
+      BulletFireTime: 1.4
+      BulletFireEnemyPos: 0
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 0
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 0
+      FlySpeed: 5
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      AttackJudgeTimes: 1
+      EachAttackTime: 0
+    MOVEs: []
+  - ID: 8
+    SkillName: huixuejiayisu
+    SkillIcon: {fileID: 21300000, guid: ae68996b09caffc44bab051ff2eb0d00, type: 3}
+    StateName: W_BUFF
+    AnimationName: W_BUFF
+    SkillSEList:
+    - SEID: 0
+      SEName: BUFF_HP
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.4
+      SkillSEDuringTime: 5
+    - SEID: 1
+      SEName: BUFF_SPEED
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.4
+      SkillSEDuringTime: 5
+    DuringTime: 1
+    SkillRollEndTime: 0.2
+    ShakeBackBeginTime: 0.6
+    CoolingTime: 10
+    CostMP: 10
+    ATKs: []
+    BUFFs:
+    - RoleAttribute: 1
+      BeginTime: 0.4
+      RoleTimes: 5
+      EachRoleTime: 1
+      EffectValue: 10
+      IfRecycle: 0
+    - RoleAttribute: 4
+      BeginTime: 0.4
+      RoleTimes: 1
+      EachRoleTime: 5
+      EffectValue: 4
+      IfRecycle: 1
+    Bullets: []
+    MOVEs: []

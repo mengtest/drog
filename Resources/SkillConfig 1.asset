@@ -1,0 +1,141 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f8bb9ad85f77ed4fa33ef8dced2e1ce, type: 3}
+  m_Name: SkillConfig 1
+  m_EditorClassIdentifier: 
+  SkillDataList:
+  - SkillID: 0
+    SkillName: zhanli
+    SkillStateName: Idle
+    SkillAnimationName: W_Idle
+    SkillSEList: []
+    SkillDuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    SkillCoolingTime: 0
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 0
+  - SkillID: 1
+    SkillName: bengpao
+    SkillStateName: Run
+    SkillAnimationName: W_Run
+    SkillSEList: []
+    SkillDuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    SkillCoolingTime: 0
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 0
+  - SkillID: 2
+    SkillName: shouji
+    SkillStateName: BeAttacked
+    SkillAnimationName: W_BeAttacked
+    SkillSEList: []
+    SkillDuringTime: 0.333
+    SkillRollEndTime: 0.333
+    ShakeBackBeginTime: 0.333
+    SkillCoolingTime: 0
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 0
+  - SkillID: 3
+    SkillName: siwang
+    SkillStateName: Dead
+    SkillAnimationName: W_Dead
+    SkillSEList: []
+    SkillDuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    SkillCoolingTime: 0
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 0
+  - SkillID: 4
+    SkillName: putonggongji
+    SkillStateName: SkillA
+    SkillAnimationName: W_SkillA
+    SkillSEList: []
+    SkillDuringTime: 1.333
+    SkillRollEndTime: 0.2
+    ShakeBackBeginTime: 0.7
+    SkillCoolingTime: 1.4
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0.23
+    SkillDamage: 5
+    MoveSpeed: 0
+  - SkillID: 5
+    SkillName: shanbi
+    SkillStateName: SkillD
+    SkillAnimationName: W_SkillD
+    SkillSEList: []
+    SkillDuringTime: 0.666
+    SkillRollEndTime: 0
+    ShakeBackBeginTime: 0.66
+    SkillCoolingTime: 2
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 2
+  - SkillID: 1
+    SkillName: bengpao
+    SkillStateName: Run
+    SkillAnimationName: W_Run
+    SkillSEList: []
+    SkillDuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    SkillCoolingTime: 0
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 0
+  - SkillID: 1
+    SkillName: bengpao
+    SkillStateName: Run
+    SkillAnimationName: W_Run
+    SkillSEList: []
+    SkillDuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    SkillCoolingTime: 0
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 0
+  - SkillID: 1
+    SkillName: bengpao
+    SkillStateName: Run
+    SkillAnimationName: W_Run
+    SkillSEList: []
+    SkillDuringTime: 999999
+    SkillRollEndTime: 999999
+    ShakeBackBeginTime: 999999
+    SkillCoolingTime: 0
+    SkillCostMP: 0
+    SkillType: 0
+    SkillJudgeTime: 0
+    SkillDamage: 0
+    MoveSpeed: 0
