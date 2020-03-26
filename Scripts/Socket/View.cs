@@ -98,7 +98,7 @@ public class View
             var b = BulletsManager.buob[t.Key];
             e.transform.position =  Vector3.Lerp(e.transform.position,new Vector3(b.pos.x,e.transform.position.y,b.pos.z),0.7f);
             e.transform.eulerAngles = b.rot;
-            Debug.Log("view " + b.rot);
+            //Debug.Log("view " + b.rot);
         }
 
         //timer.First();

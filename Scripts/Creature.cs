@@ -308,7 +308,7 @@ public class Creature : ObjectInf {
         //curSkillStage = (0,0,0);
 
         //技能释放成功
-        Debug.Log("use skill " + useSID);
+        //Debug.Log("use skill " + useSID);
         return true;
     }
 
@@ -351,7 +351,7 @@ public class Creature : ObjectInf {
                     center.z,center.x,
                     centerTo.z,centerTo.x,
                     hudu)) {
-                        e.ToBeAttacked(atk.SkillAttackJudgeDamageRatio*curCreatureData.Attack, name, atk.AAF);
+                        e.ToBeAttacked(atk.SkillAttackJudgeDamageRatio*curCreatureData.Attack, name, atk.AAF, pos);
                     }
             }
         }
@@ -362,7 +362,7 @@ public class Creature : ObjectInf {
                     continue;
                 }
                 if(Vector3.Distance(pos,e.pos)<=atk.SkillAttackJudgeAreaRadius+e.curCreatureData.Radius) {
-                    e.ToBeAttacked(atk.SkillAttackJudgeDamageRatio*curCreatureData.Attack, name, atk.AAF);
+                    e.ToBeAttacked(atk.SkillAttackJudgeDamageRatio*curCreatureData.Attack, name, atk.AAF, pos);
                 }
             }
         }
@@ -422,7 +422,7 @@ public class Creature : ObjectInf {
     /// 人物受击
     /// </summary>
     /// <param name="Damage"></param>
-    public virtual void ToBeAttacked(float Damage, string from, AttackAdditionalFeatures aaf) {
+    public virtual void ToBeAttacked(float Damage, string from, AttackAdditionalFeatures aaf, Vector3 frompos) {
         if(curFSM.CurState.GetStateName()=="Dodge") {
             Debug.Log("闪避");
             return;
@@ -457,6 +457,7 @@ public class Creature : ObjectInf {
         }
         if((aaf.ftype&1)>0) {
             //击退
+            dir = GetDir(pos,frompos);
             MoveContrast(aaf.BeakBackDis);
         }
         if((aaf.ftype&2)>0) {
@@ -490,6 +491,7 @@ public class Creature : ObjectInf {
             }
         }
         if((aaf.ftype&128)>0) {
+            //破防
             BUFFtimer.Add((Logic.time,delegate() {
                 DefenceChange(aaf.CutDefenceRatio);
             }));
@@ -528,6 +530,13 @@ public class Creature : ObjectInf {
     /// <returns>目标技能的剩余冷却时间</returns>
     public virtual float GetSkillRemainingCoolingTime(int SkillIdex) {
         return (Logic.time-SkillLastFireTime[SkillIdex]>curSkillDataList[SkillIdex].CoolingTime)?0:(curSkillDataList[SkillIdex].CoolingTime-Logic.time+SkillLastFireTime[SkillIdex]);
+    }
+
+    public static int GetDir(Vector3 from, Vector3 to) {
+        Vector3 direction = new Vector3(to.x, 0, to.z)- new Vector3(from.x, 0, from.z);
+        var Direction = Quaternion.LookRotation(direction);
+        var dir = (int)((Direction.eulerAngles.y+7.5f)/15.0f);
+        return dir;
     }
 
 }

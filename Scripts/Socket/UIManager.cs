@@ -163,7 +163,7 @@ public class UIManager
         SendSkillOpt(11);
     }
     static void PlaySkillBeAttacked() {
-        Logic.obinfmp[Client.name].ToBeAttacked(3,Client.name,new AttackAdditionalFeatures());
+        Logic.obinfmp[Client.name].ToBeAttacked(3,Client.name,new AttackAdditionalFeatures(), new Vector3(0,0,0));
     }
 
     static void SendSkillOpt(int id) {

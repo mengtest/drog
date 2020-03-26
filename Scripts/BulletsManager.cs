@@ -101,7 +101,7 @@ public class Bullet : ObjectInf {
                 //飞行类
             }
         }
-        if(bu.BulletFireEnemyPos) {
+        /*if(bu.BulletFireEnemyPos) {
             Creature temp = null;
             foreach(var t in Logic.obinfmp) {
                 var e = Logic.obinfmp[t.Key];
@@ -115,6 +115,7 @@ public class Bullet : ObjectInf {
                     temp = e;
                 } else {
                     if(Dis2(pos,e.pos)<Dis2(pos,temp.pos)) {
+                        Debug.Log("SUO DING " + e.name + " pos " + e.pos);
                         temp = e;
                     }
                 }
@@ -122,8 +123,8 @@ public class Bullet : ObjectInf {
             if(temp!=null && Dis2(pos,temp.pos)<bu.MaxSearchDistance) {
                 pos = temp.pos;
             }
-        }
-        if(bu.IfLockEnemy) {
+        }*/
+        //if(bu.IfLockEnemy) {
             Creature temp = null;
             foreach(var t in Logic.obinfmp) {
                 var e = Logic.obinfmp[t.Key];
@@ -139,19 +140,23 @@ public class Bullet : ObjectInf {
                     temp = e;
                 }
             }
-            if(temp!=null && Dis2(pos,temp.pos)<bu.MaxSearchDistance) {
+            if(temp!=null && Dis2(pos,temp.pos)<bu.MaxSearchDistance && bu.IfLockEnemy) {
                 Lockname = temp.name;
             } else {
                 Lockname = "";
             }
-        }
+            if(temp!=null && Dis2(pos,temp.pos)<bu.MaxSearchDistance && bu.BulletFireEnemyPos) {
+                pos = temp.pos;
+                Debug.Log("fire " + temp.name + " " + temp.pos);
+            }
+        //}
     }
     public void Update() {
         //if(bu.BulletFireEnemyPos) {
 
         //} else {
         if(Lockname!="") {
-            Debug.Log("锁定 " + Lockname);
+            //Debug.Log("锁定 " + Lockname);
             dir = GetDir(pos,Logic.obinfmp[Lockname].pos);
         } 
         Move(bu.FlySpeed);
@@ -212,7 +217,7 @@ public class Bullet : ObjectInf {
                 } else {
                     HitMap[e.name]=1;
                 }
-                e.ToBeAttacked(bu.Attack.SkillAttackJudgeDamageRatio*Logic.obinfmp[Mastername].curCreatureData.Attack,Mastername,bu.Attack.AAF);
+                e.ToBeAttacked(bu.Attack.SkillAttackJudgeDamageRatio*Logic.obinfmp[Mastername].curCreatureData.Attack,Mastername,bu.Attack.AAF, pos);
                 if(!bu.IfRoleOnMultipleGoals) {
                     break;
                 }
@@ -306,11 +311,11 @@ public class Bullet : ObjectInf {
             }
         }
     }
-    float Dis2(Vector3 a, Vector3 b) {
+    public static float Dis2(Vector3 a, Vector3 b) {
         return Vector3.Distance(new Vector3(a.x,0,a.z), new Vector3(b.x,0,b.z));
     }
 
-    int GetDir(Vector3 from, Vector3 to) {
+    public static int GetDir(Vector3 from, Vector3 to) {
         Vector3 direction = new Vector3(to.x, 0, to.z)- new Vector3(from.x, 0, from.z);
         var Direction = Quaternion.LookRotation(direction);
         var dir = (int)((Direction.eulerAngles.y+7.5f)/15.0f);

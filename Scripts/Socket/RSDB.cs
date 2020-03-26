@@ -39,19 +39,6 @@ public class RSDB
     /// 预加载资源管理类初始化->加载资源
     /// </summary>
     public static void Init() { 
-        SEName.Add("W_A1");
-        SEName.Add("W_A2");
-        SEName.Add("W_A11");
-        SEName.Add("W_A22");
-        SEName.Add("W_Ah");
-        SEName.Add("W_Daoguangjianying");
-        SEName.Add("W_Shanguang");
-        SEName.Add("W_Tiaozhanluodi");
-        SEName.Add("W_Xuanfeng3");
-        SEName.Add("W_Xuanfenghong");
-        SEName.Add("W_Xuanfengzhan");
-        SEName.Add("W_Xuanfengzhan2");
-        SEName.Add("W_Xuli");
         //SEName.Add("W_A1");
 
 
@@ -79,12 +66,52 @@ public class RSDB
         DB["W_Block"] = Resources.Load("W_Block") as GameObject;
         //DB["W_Daoguangjianying"] = Resources.Load("W_Daoguangjianying") as GameObject;
 
+        SEName.Clear();
         string path = "Warrior/";
+        SEName.Add("W_A1");
+        SEName.Add("W_A2");
+        SEName.Add("W_A11");
+        SEName.Add("W_A22");
+        SEName.Add("W_Ah");
+        SEName.Add("W_Daoguangjianying");
+        SEName.Add("W_Shanguang");
+        SEName.Add("W_Tiaozhanluodi");
+        SEName.Add("W_Xuanfeng3");
+        SEName.Add("W_Xuanfenghong");
+        SEName.Add("W_Xuanfengzhan");
+        SEName.Add("W_Xuanfengzhan2");
+        SEName.Add("W_Xuli");
         foreach(var e in SEName) {
             if(!DB.ContainsKey(e)) {
                 DB[e] = Resources.Load(path+e) as GameObject;
             }
         }
+
+
+        SEName.Clear();
+        path = "Archer/";
+        SEName.Add("A_A");
+        SEName.Add("A_AA");
+        SEName.Add("A_Houtiao");
+        SEName.Add("A_Huoyan");
+        SEName.Add("A_Huoyanjian");
+        SEName.Add("A_Lianshejian");
+        SEName.Add("A_Lianshezhen");
+        SEName.Add("A_Qiantiao");
+        SEName.Add("A_Tifei");
+        SEName.Add("A_Tifei2");
+        SEName.Add("A_Hudun");
+        SEName.Add("A_Suoding");
+        SEName.Add("A_Mofajian");
+        SEName.Add("A_Suoding2");
+        SEName.Add("A_Kongduidi");
+        SEName.Add("A_Kongduidi2");
+        foreach(var e in SEName) {
+            if(!DB.ContainsKey(e)) {
+                DB[e] = Resources.Load(path+e) as GameObject;
+            }
+        }
+
         
 
         //子弹

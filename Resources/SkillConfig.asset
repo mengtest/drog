@@ -384,7 +384,7 @@ MonoBehaviour:
     Floats:
     - BeginTime: 0
       UPv: 2
-  - SkillName: "\u6218\u58EB_BUFF\uFF08+HP\uFF0C+SPEED\uFF09"
+  - SkillName: "\u6218\u58EB_BUFF\uFF08+HP\uFF0C+SPEED\uFF0C+DEFENCE\uFF09"
     ID: 8
     SkillIcon: {fileID: 21300000, guid: ae68996b09caffc44bab051ff2eb0d00, type: 3}
     StateName: W_BUFF
@@ -399,6 +399,13 @@ MonoBehaviour:
       SkillSEDuringTime: 5
     - SEID: 1
       SEName: BUFF_SPEED
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.4
+      SkillSEDuringTime: 5
+    - SEID: 1
+      SEName: A_Hudun
       SELoadPointName: BuffPoint
       IfFollowLoadPoint: 1
       IfFollowAnimationDestroy: 0
@@ -429,6 +436,13 @@ MonoBehaviour:
       EffectRatio: 0
       IfRecycle: 0
     - RoleAttribute: 4
+      BeginTime: 0.4
+      RoleTimes: 1
+      EachRoleTime: 5
+      EffectValue: 4
+      EffectRatio: 1.5
+      IfRecycle: 1
+    - RoleAttribute: 8
       BeginTime: 0.4
       RoleTimes: 1
       EachRoleTime: 5
@@ -583,9 +597,9 @@ MonoBehaviour:
     BlockSEName: 
     BlockSEDuringTime: 0
     NextSkillID: -1
-    DuringTime: 0.3
-    SkillRollEndTime: 0.3
-    ShakeBackBeginTime: 0.3
+    DuringTime: 0.4
+    SkillRollEndTime: 0.4
+    ShakeBackBeginTime: 0.4
     CoolingTime: 0
     CostMP: 0
     ATKs: []
@@ -622,7 +636,7 @@ MonoBehaviour:
     BlockSEDuringTime: 0
     NextSkillID: -1
     DuringTime: 9999999
-    SkillRollEndTime: 9999999
+    SkillRollEndTime: 0
     ShakeBackBeginTime: 9999999
     CoolingTime: 0
     CostMP: 0
@@ -630,23 +644,930 @@ MonoBehaviour:
     BUFFs: []
     Bullets: []
     MOVEs: []
-    Floats: []
-  - SkillName: "\u5F13\u7BAD\u624B_\u666E\u653B"
+    Floats:
+    - BeginTime: 0
+      UPv: 4
+  - SkillName: "\u5F13\u7BAD\u624B_\u683C\u6321"
     ID: 17
-    SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
-    StateName: A_A
-    AnimationName: A_A
+    SkillIcon: {fileID: 21300000, guid: 64fb1d8225d092d41a306021a7861cb4, type: 3}
+    StateName: Block
+    AnimationName: A_Gedang
     SkillSEList: []
-    BlockSEName: 
-    BlockSEDuringTime: 0
+    BlockSEName: W_Block
+    BlockSEDuringTime: 1
     NextSkillID: -1
-    DuringTime: 0
-    SkillRollEndTime: 0
-    ShakeBackBeginTime: 0
-    CoolingTime: 0
+    DuringTime: 1.5
+    SkillRollEndTime: 0.1
+    ShakeBackBeginTime: 0.2
+    CoolingTime: 1.5
     CostMP: 0
     ATKs: []
     BUFFs: []
     Bullets: []
+    MOVEs: []
+    Floats: []
+  - SkillName: "\u5F13\u7BAD\u624B_\u666E\u653B"
+    ID: 18
+    SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
+    StateName: A_A
+    AnimationName: A_A
+    SkillSEList:
+    - SEID: 0
+      SEName: A_Tifei
+      SELoadPointName: BulletPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.5
+      SkillSEDuringTime: 1
+    BlockSEName: 
+    BlockSEDuringTime: 0
+    NextSkillID: -1
+    DuringTime: 1
+    SkillRollEndTime: 0.3
+    ShakeBackBeginTime: 0.65
+    CoolingTime: 0.3
+    CostMP: 0
+    ATKs: []
+    BUFFs: []
+    Bullets:
+    - BulletSEName: A_A
+      BulletFireTime: 0.5
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 1
+      MaxSearchDistance: 8
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 2
+        SkillAttackJudgeAreaRadius: 0.5
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0.95
+          CutDefenceDuringTime: 5
+      FlySpeed: 10
+      MaxDuringTime: 10
+      IfPenetrate: 0
+      IfRoleOnMultipleGoals: 0
+      JudgeTimes: 1
+      EachAttackTime: 0
+      CutSpeedRatio: 0
+      AE: []
+    MOVEs: []
+    Floats: []
+  - SkillName: "\u5F13\u7BAD\u624B_\u95EA\u907F"
+    ID: 19
+    SkillIcon: {fileID: 21300000, guid: dc569786b1378d140b50ddc13c8a47a2, type: 3}
+    StateName: Dodge
+    AnimationName: A_Hougunshe
+    SkillSEList:
+    - SEID: 0
+      SEName: A_Houtiao
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 0
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0
+      SkillSEDuringTime: 0.8
+    BlockSEName: 
+    BlockSEDuringTime: 0
+    NextSkillID: -1
+    DuringTime: 1.3
+    SkillRollEndTime: 0
+    ShakeBackBeginTime: 1.1
+    CoolingTime: 2
+    CostMP: 0
+    ATKs: []
+    BUFFs: []
+    Bullets:
+    - BulletSEName: A_Huoyanjian
+      BulletFireTime: 0.9
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 2
+        SkillAttackJudgeAreaRadius: 3
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 1
+        AAF:
+          ftype: 129
+          BeakBackDis: 2
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0.8
+          CutDefenceDuringTime: 1
+      FlySpeed: 15
+      MaxDuringTime: 10
+      IfPenetrate: 0
+      IfRoleOnMultipleGoals: 0
+      JudgeTimes: 1
+      EachAttackTime: 0
+      CutSpeedRatio: 0
+      AE: []
+    MOVEs:
+    - BeginTime: 0
+      DuringTime: 0.8
+      Speed: -4
+    Floats: []
+  - SkillName: "\u5F13\u7BAD\u624B_\u9B54\u6CD5\u7BAD"
+    ID: 20
+    SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
+    StateName: A_Mofajian
+    AnimationName: A_Mofajian
+    SkillSEList: []
+    BlockSEName: 
+    BlockSEDuringTime: 0
+    NextSkillID: -1
+    DuringTime: 1
+    SkillRollEndTime: 0.1
+    ShakeBackBeginTime: 0.5
+    CoolingTime: 2
+    CostMP: 2
+    ATKs: []
+    BUFFs: []
+    Bullets:
+    - BulletSEName: A_Kongduidi
+      BulletFireTime: 0.3
+      BulletFireEnemyPos: 1
+      IfLockEnemy: 1
+      MaxSearchDistance: 8
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 2
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 3
+        AAF:
+          ftype: 4
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0.9
+          CutSpeedDuringTime: 0.9
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 10
+      MaxDuringTime: 10
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Suoding2
+      BulletFireTime: 0.02
+      BulletFireEnemyPos: 1
+      IfLockEnemy: 1
+      MaxSearchDistance: 8
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 2
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 0
+        AAF:
+          ftype: 4
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0.9
+          CutSpeedDuringTime: 0.9
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 0
+      MaxDuringTime: 1
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 0
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    MOVEs: []
+    Floats: []
+  - SkillName: "\u5F13\u7BAD\u624B_\u8E22\u98DE"
+    ID: 21
+    SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
+    StateName: A_Tifei
+    AnimationName: A_Tifei
+    SkillSEList:
+    - SEID: 0
+      SEName: A_Tifei2
+      SELoadPointName: BulletPoint
+      IfFollowLoadPoint: 0
+      IfFollowAnimationDestroy: 1
+      SkillSEBeginTime: 0.5
+      SkillSEDuringTime: 1
+    BlockSEName: 
+    BlockSEDuringTime: 0
+    NextSkillID: -1
+    DuringTime: 1.2
+    SkillRollEndTime: 0.3
+    ShakeBackBeginTime: 0.8
+    CoolingTime: 4
+    CostMP: 0
+    ATKs:
+    - SkillAttackJudgeBeginTime: 0.5
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 3
+      SkillAttackJudgeAreaRadius: 1.5
+      AttackJudgeAreaAngle: 60
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 3
+      AAF:
+        ftype: 77
+        BeakBackDis: 3
+        FloatingHeight: 0
+        FloatingDuringTime: 0
+        CutSpeedRatio: 0.4
+        CutSpeedDuringTime: 2
+        SuckBloodFromDamgeRatio: 0
+        CutMp: 0
+        CutDefenceRatio: 0
+        CutDefenceDuringTime: 0
+    BUFFs: []
+    Bullets: []
+    MOVEs: []
+    Floats: []
+  - SkillName: "\u5F13\u7BAD\u624B_BUFF(+HP,+SPEED,+ATK)"
+    ID: 22
+    SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
+    StateName: A_BUFF
+    AnimationName: A_BUFF
+    SkillSEList:
+    - SEID: 0
+      SEName: BUFF_HP
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.5
+      SkillSEDuringTime: 5
+    - SEID: 0
+      SEName: BUFF_SPEED
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.5
+      SkillSEDuringTime: 5
+    BlockSEName: 
+    BlockSEDuringTime: 0
+    NextSkillID: -1
+    DuringTime: 1
+    SkillRollEndTime: 0.1
+    ShakeBackBeginTime: 0.7
+    CoolingTime: 5
+    CostMP: 2
+    ATKs: []
+    BUFFs:
+    - RoleAttribute: 1
+      BeginTime: 0.5
+      RoleTimes: 5
+      EachRoleTime: 1
+      EffectValue: 2
+      EffectRatio: 0
+      IfRecycle: 0
+    - RoleAttribute: 4
+      BeginTime: 0.5
+      RoleTimes: 1
+      EachRoleTime: 5
+      EffectValue: 0
+      EffectRatio: 1.5
+      IfRecycle: 1
+    - RoleAttribute: 16
+      BeginTime: 0.5
+      RoleTimes: 1
+      EachRoleTime: 5
+      EffectValue: 0
+      EffectRatio: 2
+      IfRecycle: 1
+    Bullets: []
+    MOVEs: []
+    Floats: []
+  - SkillName: "\u5F13\u7BAD\u624B_\u5F3A\u5F13\u8FDE\u5C04"
+    ID: 23
+    SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
+    StateName: A_Lianshe
+    AnimationName: A_Lianshe
+    SkillSEList:
+    - SEID: 0
+      SEName: A_Lianshezhen
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 1
+      SkillSEBeginTime: 0.7
+      SkillSEDuringTime: 3
+    - SEID: 0
+      SEName: A_Lianshezhen
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 1
+      SkillSEBeginTime: 2
+      SkillSEDuringTime: 3
+    BlockSEName: 
+    BlockSEDuringTime: 0
+    NextSkillID: -1
+    DuringTime: 3.4
+    SkillRollEndTime: 0.7
+    ShakeBackBeginTime: 3.2
+    CoolingTime: 10
+    CostMP: 5
+    ATKs:
+    - SkillAttackJudgeBeginTime: 0.7
+      SkillAttackJudgeDistance: 0
+      SkillAttackJudgeAreaType: 2
+      SkillAttackJudgeAreaRadius: 3
+      AttackJudgeAreaAngle: 0
+      AttackJudgeAreaWidth: 0
+      AttackJudgeAreaHeight: 0
+      SkillAttackJudgeDamageRatio: 0
+      AAF:
+        ftype: 1
+        BeakBackDis: 2
+        FloatingHeight: 0
+        FloatingDuringTime: 0
+        CutSpeedRatio: 0
+        CutSpeedDuringTime: 0
+        SuckBloodFromDamgeRatio: 0
+        CutMp: 0
+        CutDefenceRatio: 0
+        CutDefenceDuringTime: 0
+    BUFFs: []
+    Bullets:
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 0.83
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 0.9
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 1.04
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 1.18
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 1.32
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 1.46
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 1.6
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 1.74
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 1.88
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 2.02
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 2.16
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 2.3
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 2.44
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 2.58
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 2.72
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
+    - BulletSEName: A_Lianshejian
+      BulletFireTime: 2.86
+      BulletFireEnemyPos: 0
+      IfLockEnemy: 0
+      MaxSearchDistance: 5
+      IfAttackJudge: 1
+      Attack:
+        SkillAttackJudgeBeginTime: 0
+        SkillAttackJudgeDistance: 0
+        SkillAttackJudgeAreaType: 0
+        SkillAttackJudgeAreaRadius: 1
+        AttackJudgeAreaAngle: 0
+        AttackJudgeAreaWidth: 0
+        AttackJudgeAreaHeight: 0
+        SkillAttackJudgeDamageRatio: 2
+        AAF:
+          ftype: 0
+          BeakBackDis: 0
+          FloatingHeight: 0
+          FloatingDuringTime: 0
+          CutSpeedRatio: 0
+          CutSpeedDuringTime: 0
+          SuckBloodFromDamgeRatio: 0
+          CutMp: 0
+          CutDefenceRatio: 0
+          CutDefenceDuringTime: 0
+      FlySpeed: 18
+      MaxDuringTime: 5
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 1
+      EachAttackTime: 1
+      CutSpeedRatio: 0
+      AE: []
     MOVEs: []
     Floats: []
