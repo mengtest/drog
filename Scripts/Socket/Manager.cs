@@ -108,7 +108,14 @@ public class ObjectInf {
     /// <param name="npos"></param>
     /// <returns></returns>
     public bool JudgeNewPosInScenceOK(Vector3 npos) {
-        return true;
+        //43.5    150.3
+        float r = 21;
+        Vector3 cir = new Vector3(43.5f,0,150.3f);
+        if(Dis2(cir, npos) > r) {
+            return false;
+        } else {
+            return true;
+        }
     }
 }
 public class Manager : MonoBehaviour

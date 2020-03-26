@@ -56,6 +56,8 @@ public class RSDB
         DB["BUFF_SPEED"] = Resources.Load("BUFF_SPEED") as GameObject;
         DB["A_Block"] = Resources.Load("A_Block") as GameObject;
         DB["W_Block"] = Resources.Load("W_Block") as GameObject;
+        DB["W_Block"] = Resources.Load("W_Block") as GameObject;
+        DB["W_Daoguangjianying"] = Resources.Load("W_Daoguangjianying") as GameObject;
         
 
         //子弹
