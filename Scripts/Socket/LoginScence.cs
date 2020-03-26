@@ -104,7 +104,8 @@ public class LoginScence : MonoBehaviour {
         //Debug.Log("login sc dataq count " + Client.dataQueue.Count);
         if(ifLogin) {
             //已获得帧消息就开始游戏，场景跳
-            SceneManager.LoadScene("ssstest2");
+            SceneManager.LoadScene("shamojuedou");
+            //SceneManager.LoadScene("ssstest2");
         }
     }
 

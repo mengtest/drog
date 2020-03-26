@@ -91,7 +91,8 @@ public class Logic
         tempobject.id = id;
         //Debug.Log("player name " + name);
         tempobject.tag = "player"+id;
-        tempobject.pos = new Vector3(0,0,0);
+        tempobject.pos = new Vector3(44,0,131);
+        //tempobject.pos = new Vector3(0,0,0);
         tempobject.rot = new Vector3(0,0,0);
         tempobject.InitLivinngCreature();
         //PlayerMp[name] = Instantiate(MyResources[PlayerResourcesName[i]],tempobject.pos,tempobject.rot);

@@ -1,0 +1,184 @@
+fileFormatVersion: 2
+guid: 86e694378d3f63b4aac26736928538d3
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: TelNumara_Dungeon8roomA
+    100002: //RootNode
+    100004: TelNumara_Dungeon8roomC
+    100006: TelNumara_Dungeon8roomC_a
+    100008: TelNumara_Dungeon8roomC_b
+    100010: TelNumara_Dungeon8roomC_a1
+    100012: TelNumara_Dungeon8roomC_b1
+    100014: ______001
+    100016: TelNumara_Dungeon8room_light
+    100018: TelNumara_Dungeon8roomB
+    100020: TelNumara_Dungeon8roomB_1
+    100022: TelNumara_Dungeon8roomC001
+    100024: TelNumara_Dungeon8roomD
+    100026: TelNumara_Dungeon8roomE
+    100028: TelNumara_Dungeon8roomF
+    100030: TelNumara_Dungeon8roomF_1
+    100032: TelNumara_Dungeon8roomG
+    100034: TelNumara_Dungeon8roomH
+    100036: TelNumara_Dungeon8roomH_1
+    100038: TelNumara_Dungeon8roomI
+    100040: TelNumara_Dungeon8roomJ
+    100042: TelNumara_Dungeon8roomk
+    400000: TelNumara_Dungeon8roomA
+    400002: //RootNode
+    400004: TelNumara_Dungeon8roomC
+    400006: TelNumara_Dungeon8roomC_a
+    400008: TelNumara_Dungeon8roomC_b
+    400010: TelNumara_Dungeon8roomC_a1
+    400012: TelNumara_Dungeon8roomC_b1
+    400014: ______001
+    400016: TelNumara_Dungeon8room_light
+    400018: TelNumara_Dungeon8roomB
+    400020: TelNumara_Dungeon8roomB_1
+    400022: TelNumara_Dungeon8roomC001
+    400024: TelNumara_Dungeon8roomD
+    400026: TelNumara_Dungeon8roomE
+    400028: TelNumara_Dungeon8roomF
+    400030: TelNumara_Dungeon8roomF_1
+    400032: TelNumara_Dungeon8roomG
+    400034: TelNumara_Dungeon8roomH
+    400036: TelNumara_Dungeon8roomH_1
+    400038: TelNumara_Dungeon8roomI
+    400040: TelNumara_Dungeon8roomJ
+    400042: TelNumara_Dungeon8roomk
+    2300000: TelNumara_Dungeon8roomA
+    2300002: TelNumara_Dungeon8roomC
+    2300004: //RootNode
+    2300006: TelNumara_Dungeon8roomC_a
+    2300008: TelNumara_Dungeon8roomC_b
+    2300010: TelNumara_Dungeon8roomC_a1
+    2300012: TelNumara_Dungeon8roomC_b1
+    2300014: ______001
+    2300016: TelNumara_Dungeon8room_light
+    2300018: TelNumara_Dungeon8roomB
+    2300020: TelNumara_Dungeon8roomB_1
+    2300022: TelNumara_Dungeon8roomC001
+    2300024: TelNumara_Dungeon8roomD
+    2300026: TelNumara_Dungeon8roomE
+    2300028: TelNumara_Dungeon8roomF
+    2300030: TelNumara_Dungeon8roomF_1
+    2300032: TelNumara_Dungeon8roomG
+    2300034: TelNumara_Dungeon8roomH
+    2300036: TelNumara_Dungeon8roomH_1
+    2300038: TelNumara_Dungeon8roomI
+    2300040: TelNumara_Dungeon8roomJ
+    2300042: TelNumara_Dungeon8roomk
+    3300000: TelNumara_Dungeon8roomA
+    3300002: TelNumara_Dungeon8roomC
+    3300004: //RootNode
+    3300006: TelNumara_Dungeon8roomC_a
+    3300008: TelNumara_Dungeon8roomC_b
+    3300010: TelNumara_Dungeon8roomC_a1
+    3300012: TelNumara_Dungeon8roomC_b1
+    3300014: ______001
+    3300016: TelNumara_Dungeon8room_light
+    3300018: TelNumara_Dungeon8roomB
+    3300020: TelNumara_Dungeon8roomB_1
+    3300022: TelNumara_Dungeon8roomC001
+    3300024: TelNumara_Dungeon8roomD
+    3300026: TelNumara_Dungeon8roomE
+    3300028: TelNumara_Dungeon8roomF
+    3300030: TelNumara_Dungeon8roomF_1
+    3300032: TelNumara_Dungeon8roomG
+    3300034: TelNumara_Dungeon8roomH
+    3300036: TelNumara_Dungeon8roomH_1
+    3300038: TelNumara_Dungeon8roomI
+    3300040: TelNumara_Dungeon8roomJ
+    3300042: TelNumara_Dungeon8roomk
+    4300000: TelNumara_Dungeon8roomA
+    4300002: TelNumara_Dungeon8roomC
+    4300004: TelNumara_Dungeon8roomC_b
+    4300006: TelNumara_Dungeon8roomC_a
+    4300008: TelNumara_Dungeon8roomC_b1
+    4300010: TelNumara_Dungeon8roomC_a1
+    4300012: ______001
+    4300014: TelNumara_Dungeon8roomI
+    4300016: TelNumara_Dungeon8roomF
+    4300018: TelNumara_Dungeon8roomB
+    4300020: TelNumara_Dungeon8roomH_1
+    4300022: TelNumara_Dungeon8roomF_1
+    4300024: TelNumara_Dungeon8roomJ
+    4300026: TelNumara_Dungeon8roomE
+    4300028: TelNumara_Dungeon8roomD
+    4300030: TelNumara_Dungeon8roomH
+    4300032: TelNumara_Dungeon8roomC001
+    4300034: TelNumara_Dungeon8roomG
+    4300036: TelNumara_Dungeon8roomB_1
+    4300038: TelNumara_Dungeon8room_light
+    4300040: TelNumara_Dungeon8roomk
+    7400000: Take 001
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 0.01
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 0
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 0
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
