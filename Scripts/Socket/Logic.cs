@@ -84,14 +84,26 @@ public class Logic
     /// 逻辑层创建未添加的角色
     /// </summary>
     /// <param name="name"></param>
+    const int TeamMember = 1;
     public static void LogicCreatPlayer(string name, int id) {
 
+        Debug.Log("ID : ++++++++++++++++++++++++" + id);
         var tempobject = new Creature();
         tempobject.name = name;
         tempobject.id = id;
         //Debug.Log("player name " + name);
-        tempobject.tag = "player"+id;
-        tempobject.pos = new Vector3(44,0,131);
+        tempobject.tag = "player"+(id-1)/TeamMember;
+        if(id==1) {
+            tempobject.pos = new Vector3(44,0,131);
+        } else if(id==2) {
+            tempobject.pos = new Vector3(44,0,168);
+        } else if(id==3) {
+
+        } else if(id==4) {
+
+        } else {
+            
+        }
         //tempobject.pos = new Vector3(0,0,0);
         tempobject.rot = new Vector3(0,0,0);
         tempobject.InitLivinngCreature();

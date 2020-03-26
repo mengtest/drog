@@ -158,7 +158,7 @@ public class Creature : ObjectInf {
         BUFFtimer.Update();
         curFSM.Update();
         //浮空受击y轴不移动
-        Debug.Log("UPv " + UPv);
+        //Debug.Log("UPv " + UPv);
         //if(!IfBeAttacked) {
             //y轴物理位移
             pos.y += (UPv+UPv-G*Logic.eachframtime)*Logic.eachframtime/2;
@@ -174,7 +174,7 @@ public class Creature : ObjectInf {
             pos.y = 0;
         }
         if(IfBeAttacked) {
-            Debug.Log("受击态!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");                                                
+            //Debug.Log("受击态!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");                                                
         }
         IfBeAttacked = false;
     }
@@ -307,6 +307,7 @@ public class Creature : ObjectInf {
         //curSkillStage = (0,0,0);
 
         //技能释放成功
+        Debug.Log("use skill " + useSID);
         return true;
     }
 

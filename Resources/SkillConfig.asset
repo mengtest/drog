@@ -94,11 +94,18 @@ MonoBehaviour:
     SkillIcon: {fileID: 21300000, guid: 29348afa22d2d8849b45513e882e481e, type: 3}
     StateName: W_Putonggongji
     AnimationName: W_Putonggongji
-    SkillSEList: []
+    SkillSEList:
+    - SEID: 0
+      SEName: W_A2
+      SELoadPointName: body
+      IfFollowLoadPoint: 0
+      IfFollowAnimationDestroy: 1
+      SkillSEBeginTime: 0.2
+      SkillSEDuringTime: 0.5
     BlockSEName: 
     BlockSEDuringTime: 0
     NextSkillID: -1
-    DuringTime: 1.333
+    DuringTime: 1.2
     SkillRollEndTime: 0.2
     ShakeBackBeginTime: 0.7
     CoolingTime: 0.3
@@ -173,7 +180,14 @@ MonoBehaviour:
     SkillIcon: {fileID: 21300000, guid: 3c56a2dcd3fa04745a57f36f56a1d517, type: 3}
     StateName: W_Xuanfengzhan
     AnimationName: W_Xuanfengzhan
-    SkillSEList: []
+    SkillSEList:
+    - SEID: 0
+      SEName: W_Xuanfengzhan
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 1
+      SkillSEBeginTime: 0
+      SkillSEDuringTime: 2
     BlockSEName: 
     BlockSEDuringTime: 0
     NextSkillID: -1
@@ -186,7 +200,7 @@ MonoBehaviour:
     - SkillAttackJudgeBeginTime: 0.1
       SkillAttackJudgeDistance: 0
       SkillAttackJudgeAreaType: 2
-      SkillAttackJudgeAreaRadius: 0.8
+      SkillAttackJudgeAreaRadius: 2
       AttackJudgeAreaAngle: 0
       AttackJudgeAreaWidth: 0
       AttackJudgeAreaHeight: 0
@@ -205,7 +219,7 @@ MonoBehaviour:
     - SkillAttackJudgeBeginTime: 0.4
       SkillAttackJudgeDistance: 0
       SkillAttackJudgeAreaType: 2
-      SkillAttackJudgeAreaRadius: 0.8
+      SkillAttackJudgeAreaRadius: 2
       AttackJudgeAreaAngle: 0
       AttackJudgeAreaWidth: 0
       AttackJudgeAreaHeight: 0
@@ -224,7 +238,7 @@ MonoBehaviour:
     - SkillAttackJudgeBeginTime: 0.7
       SkillAttackJudgeDistance: 0
       SkillAttackJudgeAreaType: 2
-      SkillAttackJudgeAreaRadius: 0.8
+      SkillAttackJudgeAreaRadius: 2
       AttackJudgeAreaAngle: 0
       AttackJudgeAreaWidth: 0
       AttackJudgeAreaHeight: 0
@@ -243,7 +257,7 @@ MonoBehaviour:
     - SkillAttackJudgeBeginTime: 1
       SkillAttackJudgeDistance: 0
       SkillAttackJudgeAreaType: 2
-      SkillAttackJudgeAreaRadius: 0.8
+      SkillAttackJudgeAreaRadius: 2
       AttackJudgeAreaAngle: 0
       AttackJudgeAreaWidth: 0
       AttackJudgeAreaHeight: 0
@@ -262,7 +276,7 @@ MonoBehaviour:
     - SkillAttackJudgeBeginTime: 1.3
       SkillAttackJudgeDistance: 0
       SkillAttackJudgeAreaType: 2
-      SkillAttackJudgeAreaRadius: 0.8
+      SkillAttackJudgeAreaRadius: 2
       AttackJudgeAreaAngle: 0
       AttackJudgeAreaWidth: 0
       AttackJudgeAreaHeight: 0
@@ -281,7 +295,7 @@ MonoBehaviour:
     - SkillAttackJudgeBeginTime: 1.6
       SkillAttackJudgeDistance: 0
       SkillAttackJudgeAreaType: 2
-      SkillAttackJudgeAreaRadius: 0.8
+      SkillAttackJudgeAreaRadius: 2
       AttackJudgeAreaAngle: 0
       AttackJudgeAreaWidth: 0
       AttackJudgeAreaHeight: 0
@@ -300,7 +314,7 @@ MonoBehaviour:
     - SkillAttackJudgeBeginTime: 1.9
       SkillAttackJudgeDistance: 0
       SkillAttackJudgeAreaType: 2
-      SkillAttackJudgeAreaRadius: 0.8
+      SkillAttackJudgeAreaRadius: 2
       AttackJudgeAreaAngle: 0
       AttackJudgeAreaWidth: 0
       AttackJudgeAreaHeight: 0
@@ -325,7 +339,14 @@ MonoBehaviour:
     SkillIcon: {fileID: 21300000, guid: de5a9e700f73a6c46a5844d5219e88ce, type: 3}
     StateName: W_Tujin
     AnimationName: W_Tiaozhan
-    SkillSEList: []
+    SkillSEList:
+    - SEID: 0
+      SEName: W_Tiaozhanluodi
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 0
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.5
+      SkillSEDuringTime: 2
     BlockSEName: 
     BlockSEDuringTime: 0
     NextSkillID: -1
@@ -383,6 +404,13 @@ MonoBehaviour:
       IfFollowAnimationDestroy: 0
       SkillSEBeginTime: 0.4
       SkillSEDuringTime: 5
+    - SEID: 2
+      SEName: W_Xuli
+      SELoadPointName: BuffPoint
+      IfFollowLoadPoint: 1
+      IfFollowAnimationDestroy: 0
+      SkillSEBeginTime: 0.2
+      SkillSEDuringTime: 5
     BlockSEName: 
     BlockSEDuringTime: 0
     NextSkillID: -1
@@ -390,7 +418,7 @@ MonoBehaviour:
     SkillRollEndTime: 0.2
     ShakeBackBeginTime: 0.6
     CoolingTime: 10
-    CostMP: 5
+    CostMP: 0
     ATKs: []
     BUFFs:
     - RoleAttribute: 1
@@ -450,34 +478,34 @@ MonoBehaviour:
     Floats:
     - BeginTime: 0
       UPv: 4
-  - SkillName: "\u6218\u58EB_\u7FA4\u4F53\u589E\u76CA"
+  - SkillName: "\u6218\u58EB_\u5200\u5149\u5251\u5F71"
     ID: 11
     SkillIcon: {fileID: 21300000, guid: 52eb5285a74e9f342a5b2464345fd7cd, type: 3}
-    StateName: W_MBUFF
-    AnimationName: W_Idle
+    StateName: W_Daoguangjianying
+    AnimationName: W_Daoguangjianying
     SkillSEList: []
     BlockSEName: 
-    BlockSEDuringTime: 0
+    BlockSEDuringTime: 1
     NextSkillID: -1
-    DuringTime: 0.1
+    DuringTime: 1
     SkillRollEndTime: 0
-    ShakeBackBeginTime: 0
-    CoolingTime: 0.1
+    ShakeBackBeginTime: 1
+    CoolingTime: 1
     CostMP: 0
     ATKs: []
     BUFFs: []
     Bullets:
-    - BulletSEName: LeiDianQiu
-      BulletFireTime: 0
+    - BulletSEName: W_Daoguangjianying
+      BulletFireTime: 0.3
       BulletFireEnemyPos: 0
-      IfLockEnemy: 1
+      IfLockEnemy: 0
       MaxSearchDistance: 4
       IfAttackJudge: 1
       Attack:
         SkillAttackJudgeBeginTime: 0
         SkillAttackJudgeDistance: 0
         SkillAttackJudgeAreaType: 0
-        SkillAttackJudgeAreaRadius: 0.2
+        SkillAttackJudgeAreaRadius: 3
         AttackJudgeAreaAngle: 0
         AttackJudgeAreaWidth: 0
         AttackJudgeAreaHeight: 0
@@ -493,13 +521,18 @@ MonoBehaviour:
           CutMp: 0
           CutDefenceRatio: 0
           CutDefenceDuringTime: 0
-      FlySpeed: 10
+      FlySpeed: 0
       MaxDuringTime: 10
-      IfPenetrate: 0
-      IfRoleOnMultipleGoals: 0
-      JudgeTimes: 1
-      EachAttackTime: 1
+      IfPenetrate: 1
+      IfRoleOnMultipleGoals: 1
+      JudgeTimes: 5
+      EachAttackTime: 0.35
       CutSpeedRatio: 0
-      AE: []
+      AE:
+      - RoleAttribute: 4
+        RoleValue: 0
+        RoleRatio: 0.5
+        DuringType: 2
+        IfRecycle: 1
     MOVEs: []
     Floats: []

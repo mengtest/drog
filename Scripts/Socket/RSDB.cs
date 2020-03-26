@@ -30,6 +30,7 @@ public class RSDB
     /// <typeparam name="Material">材质</typeparam>
     /// <returns></returns>
     public static List<Material> mat = new List<Material>();
+    public static List<string> SEName = new List<string>();
 
 
 
@@ -37,7 +38,25 @@ public class RSDB
     /// <summary>
     /// 预加载资源管理类初始化->加载资源
     /// </summary>
-    public static void Init() {
+    public static void Init() { 
+        SEName.Add("W_A1");
+        SEName.Add("W_A2");
+        SEName.Add("W_A11");
+        SEName.Add("W_A22");
+        SEName.Add("W_Ah");
+        SEName.Add("W_Daoguangjianying");
+        SEName.Add("W_Shanguang");
+        SEName.Add("W_Tiaozhanluodi");
+        SEName.Add("W_Xuanfeng3");
+        SEName.Add("W_Xuanfenghong");
+        SEName.Add("W_Xuanfengzhan");
+        SEName.Add("W_Xuanfengzhan2");
+        SEName.Add("W_Xuli");
+        //SEName.Add("W_A1");
+
+
+
+
         //-----------------小球测试用-------------------------------
         DB["blackS"] = Resources.Load("blackS") as GameObject;
         DB["blueS"] = Resources.Load("blueS") as GameObject;
@@ -57,7 +76,14 @@ public class RSDB
         DB["A_Block"] = Resources.Load("A_Block") as GameObject;
         DB["W_Block"] = Resources.Load("W_Block") as GameObject;
         DB["W_Block"] = Resources.Load("W_Block") as GameObject;
-        DB["W_Daoguangjianying"] = Resources.Load("W_Daoguangjianying") as GameObject;
+        //DB["W_Daoguangjianying"] = Resources.Load("W_Daoguangjianying") as GameObject;
+
+        string path = "Warrior/";
+        foreach(var e in SEName) {
+            if(!DB.ContainsKey(e)) {
+                DB[e] = Resources.Load(path+e) as GameObject;
+            }
+        }
         
 
         //子弹

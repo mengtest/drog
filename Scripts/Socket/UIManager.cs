@@ -133,6 +133,11 @@ public class UIManager
             pret = Time.time;
         } else if(Input.GetKeyDown("f")||Input.GetKey("f")) {
             PlaySkill4();
+        } else if(Input.GetKeyDown("l")||Input.GetKey("l")) {
+            if(Logic.obinfmp.ContainsKey("shabao")) {
+                Logic.obinfmp["shabao"].HPRecover(100);
+            }
+            Logic.obinfmp[Client.name].MPRecover(100);
         }
 
     }
